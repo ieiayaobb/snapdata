@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://api.patsnap.com/cloud_patent/classification-schema.json",
+  "definitions": {
+    "lang_array": {
+      "items": {
+        "properties": {
+          "lang": {
+            "description": "The language of the text.",
+            "title": "The lang schema",
+            "type": "string"
+          },
+          "text": {
+            "description": "The text of current language.",
+            "title": "The text schema",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "type": "array"
+    }
+  },
+  "id": "http://api.patsnap.com/cloud_patent/classification.json",
+  "items": {
+    "properties": {
+      "desc": {
+        "$ref":"#/definitions/lang_array"
+      },
+      "ipc": {
+        "description": "The ipc code.",
+        "title": "The ipc schema",
+        "type": "string"
+      },
+      "parent": {
+        "items": {
+          "properties": {
+            "desc": {
+              "$ref":"#/definitions/lang_array"
+            },
+            "ipc": {
+              "description": "The ipc code.",
+              "title": "The ipc schema",
+              "type": "string"
+            },
+            "version": {
+              "description": "The version of the ipc.",
+              "title": "The version schema",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "type": "array"
+      },
+      "version": {
+        "description": "The version of the ipc.",
+        "title": "The version schema",
+        "type": "string"
+      }
+    },
+    "type": "object"
+  },
+  "type": "array"
+}

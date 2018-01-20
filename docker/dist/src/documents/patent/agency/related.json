@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {},
+  "id": "http://api.patsnap.com/cloud_patent/angency_id-schema.json",
+  "properties": {
+    "agency_id": {
+      "description": "The unique id of the agency.",
+      "title": "The agency_id schema",
+      "type": "string"
+    }
+  },
+  "type": "object"
+}

@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {},
+  "id": "http://api.patsnap.com/cloud_patent/angency-schema.json",
+  "properties": {
+    "agency_address": {
+      "description": "An explanation about the purpose of this instance.",
+      "title": "The agency_address schema",
+      "type": "string"
+    },
+    "agency_director": {
+      "items": {
+        "description": "The directors of the agency.",
+        "title": "The 0 schema",
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "agents": {
+      "items": {
+        "description": "The agent id of the agency",
+        "title": "The agents schema",
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "agency_id": {
+      "description": "The unique id of the agency.",
+      "title": "The agency_id schema",
+      "type": "string"
+    },
+    "agency_name": {
+      "description": "The name of the agency.",
+      "title": "The agency_name schema",
+      "type": "string"
+    },
+    "agency_number": {
+      "description": "The number of the agency.",
+      "title": "The agency_number schema",
+      "type": "string"
+    },
+    "agency_status": {
+      "description": "The current status of the agency.",
+      "title": "The agency_status schema",
+      "type": "string"
+    },
+    "angency_telephone": {
+      "default": "",
+      "description": "The telephone number of the agency.",
+      "title": "The angency_telephone schema",
+      "type": "string"
+    }
+  },
+  "type": "object"
+}

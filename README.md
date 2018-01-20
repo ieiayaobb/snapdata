@@ -1,6 +1,6 @@
-# frontend
+# SnapData
 
-> Developer's frontend project
+> SnapData project
 
 ## Build Setup
 

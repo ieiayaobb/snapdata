@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {},
+  "id": "http://api.patsnap.com/cloud_patent/company_id-schema.json",
+  "properties": {
+    "company_id": {
+      "default": "000000000",
+      "description": "The id of the company.",
+      "title": "The company_id schema",
+      "type": "string"
+    }
+  },
+  "type": "object"
+}

@@ -1,0 +1,141 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {
+    "lang_array": {
+      "items": {
+        "properties": {
+          "lang": {
+            "description": "The language of the text.",
+            "title": "The lang schema",
+            "type": "string"
+          },
+          "text": {
+            "description": "The text of current language.",
+            "title": "The text schema",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "type": "array"
+    }
+  },
+  "id": "http://api.patsnap.com/cloud_patent/trademark-schema.json",
+  "items": {
+    "properties": {
+      "apdt": {
+        "description": "The apply date of the trademark.",
+        "title": "The apdt schema",
+        "type": "string"
+      },
+      "apno": {
+        "description": "The apply number of the trademark.",
+        "title": "The apno schema",
+        "type": "string"
+      },
+      "company_name": {
+        "description": "The company name.",
+        "title": "The company_name schema",
+        "type": "string"
+      },
+      "credit_code": {
+        "description": "The credit code of the company.",
+        "title": "The credit_code schema",
+        "type": "string"
+      },
+      "current_status": {
+        "description": "Current status of the trademark.",
+        "title": "The current_status schema",
+        "type": "string"
+      },
+      "goods_service": {
+        "items": {
+          "properties": {
+            "content": {
+              "description": "The content of the goods.",
+              "title": "The content schema",
+              "type": "string"
+            },
+            "lang": {
+              "description": "The language of the content.",
+              "title": "The lang schema",
+              "type": "string"
+            },
+            "ncl": {
+              "description": "The nice code.",
+              "title": "The ncl schema",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "type": "array"
+      },
+      "legal_status": {
+        "items": {
+          "properties": {
+            "category_code": {
+              "description": "The legal status category code.",
+              "title": "The category_code schema",
+              "type": "string"
+            },
+            "category_content": {
+              "description": "The legal status category content.",
+              "title": "The category_content schema",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "type": "array"
+      },
+      "ncl": {
+        "items": {
+          "properties": {
+            "code": {
+              "description": "The nice code of the trademark.",
+              "title": "The code schema",
+              "type": "string"
+            },
+            "note": {
+              "$ref":"#/definitions/lang_array"
+            },
+            "title": {
+              "$ref":"#/definitions/lang_array"
+            }
+          },
+          "type": "object"
+        },
+        "type": "array"
+      },
+      "org_number": {
+        "description": "The organization number of the company.",
+        "title": "The org_number schema",
+        "type": "string"
+      },
+      "representive": {
+        "$ref":"#/definitions/lang_array"
+      },
+      "rgno": {
+        "description": "The registration number of the trademark.",
+        "title": "The rgno schema",
+        "type": "string"
+      },
+      "thumbnail": {
+        "description": "The thumbnail download url of the trademark.",
+        "title": "The thumbnail schema",
+        "type": "string"
+      },
+      "title": {
+        "$ref":"#/definitions/lang_array"
+      },
+      "trademark_id": {
+        "description": "The unique id of the trademark.",
+        "title": "The trademark_id schema",
+        "type": "string"
+      }
+    },
+    "type": "object"
+  },
+  "type": "array"
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {},
+  "id": "http://api.patsnap.com/cloud_patent/company_shareholder-schema.json",
+  "properties": {
+    "company_id": {
+      "description": "The unique id of the company.",
+      "title": "The company_id schema",
+      "type": "string"
+    },
+    "shareholder": {
+      "items": {
+        "properties": {
+          "investor_name": {
+            "description": "The investor name of the company.",
+            "title": "The investor_name schema",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "type": "array"
+    }
+  },
+  "type": "object"
+}

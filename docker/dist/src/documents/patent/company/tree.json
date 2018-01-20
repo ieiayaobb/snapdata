@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {
+    "branch": {
+      "items": {
+        "properties": {
+          "branch": {
+            "$ref":"#/definitions/branch"
+          },
+          "company_id": {
+            "description": "The id of the company.",
+            "title": "The company_id schema.",
+            "type": "string"
+          },
+          "company_name": {
+            "description": "The name of the company.",
+            "title": "The company_name schema.",
+            "type": "string"
+          },
+          "reg_institute": {
+            "description": "The registration institution of the company.",
+            "title": "The reg_institute schema.",
+            "type": "string"
+          },
+          "reg_number": {
+            "description": "The registration number of the company.",
+            "title": "The reg_number schema.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "type": "array"
+    }
+  },
+  "id": "http://api.patsnap.com/cloud_patent/company_tree-schema.json",
+  "properties": {
+    "branch": {
+      "$ref":"#/definitions/branch"
+    },
+    "company_id": {
+      "description": "An explanation about the purpose of this instance.",
+      "title": "The company_id schema.",
+      "type": "string"
+    }
+  },
+  "type": "object"
+}

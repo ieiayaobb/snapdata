@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {
+    "article_array":{
+      "items": {
+        "properties": {
+          "category": {
+            "description": "资讯分类名",
+            "title": "资讯分类名",
+            "type": "string"
+          },
+          "created": {
+            "description": "发布时间",
+            "title": "发布时间",
+            "type": "string"
+          },
+          "thumb": {
+            "description": "缩略图地址",
+            "title": "缩略图地址",
+            "type": "string"
+          },
+          "title": {
+            "description": "资讯标题",
+            "title": "资讯标题",
+            "type": "string"
+          },
+          "url": {
+            "description": "资讯地址",
+            "title": "资讯地址",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    }
+  },
+  "id": "http://api.zhihuiya.com/cloud_course/course_articles-schema.json",
+  "properties": {
+    "data": {
+      "properties": {
+        "code": {
+          "description": "返回结果状态码",
+          "title": "状态码",
+          "type": "integer"
+        },
+        "msg": {
+          "description": "返回结果信息",
+          "title": "返回结果信息",
+          "type": "string"
+        },
+        "sid": {
+          "description": "客户端状态保持",
+          "title": "sid",
+          "type": "string"
+        },
+        "status": {
+          "description": "返回成功与否状态",
+          "title": "返回状态",
+          "type": "integer"
+        },
+        "content": {
+          "$ref":"#/definitions/article_array",
+          "description": "资讯列表"
+        }
+      },
+      "type": "object"
+    }
+  },
+  "type": "object"
+}

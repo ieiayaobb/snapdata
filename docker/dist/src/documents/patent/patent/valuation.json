@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {},
+  "id": "http://api.patsnap.com/cloud_patent/patent_valuation-schema.json",
+  "items": {
+    "properties": {
+      "assignee": {
+        "default": 0.0,
+        "description": "The valuation of asssgnee.",
+        "title": "The assignee schema",
+        "type": "number"
+      },
+      "legal": {
+        "default": 0.0,
+        "description": "The valuation of legal.",
+        "title": "The legal schema",
+        "type": "number"
+      },
+      "market_attractiveness": {
+        "default": 0.0,
+        "description": "The valuation of market attractiveness.",
+        "title": "The market_attractiveness schema",
+        "type": "number"
+      },
+      "market_coverage": {
+        "default": 0.0,
+        "description": "The valuation of market coverage.",
+        "title": "The market_coverage schema",
+        "type": "number"
+      },
+      "patent_id": {
+        "default": "00000000-0000-0000-0000-000000000000",
+        "description": "An explanation about the purpose of this instance.",
+        "title": "The patent_id schema",
+        "type": "string"
+      },
+      "technology": {
+        "default": 0.0,
+        "description": "The valuation of technology.",
+        "title": "The technology schema",
+        "type": "number"
+      }
+    },
+    "type": "object"
+  },
+  "type": "array"
+}

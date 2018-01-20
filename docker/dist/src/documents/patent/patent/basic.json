@@ -1,0 +1,136 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {
+    "lang_array":{
+      "items": {
+        "properties": {
+          "lang": {
+            "description": "The language of the text.",
+            "title": "The lang schema",
+            "type": "string"
+          },
+          "text": {
+            "description": "The text of current language.",
+            "title": "The text schema",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "type": "array"
+    }
+  },
+  "id": "http://api.patsnap.com/cloud_patent/patent-schema.json",
+  "items":{
+    "properties": {
+      "abstract": {
+        "description": "The patent abstract.",
+        "$ref":"#/definitions/lang_array"
+      },
+      "an": {
+        "description": "The assignee name.",
+        "$ref":"#/definitions/lang_array"
+      },
+      "ans": {
+        "description":"The standard assignee name",
+        "$ref":"#/definitions/lang_array"
+      },
+      "apdt": {
+        "description": "An apply date of the patent.",
+        "title": "The apdt schema",
+        "type": "integer"
+      },
+      "apno": {
+        "description": "An apply number of the patent.",
+        "title": "The apno schema",
+        "type": "string"
+      },
+      "external_link": {
+        "description": "The source of current patent.",
+        "title": "The external_link schema",
+        "type": "string"
+      },
+      "claim_link": {
+        "description": "The link of the patent claim.",
+        "title": "The claim_link schema",
+        "type": "string"
+      },
+      "description_link": {
+        "description": "The description of the patent claim.",
+        "title": "The description_link schema",
+        "type": "string"
+      },
+      "in": {
+        "description": "The inventor of the patent",
+        "$ref":"#/definitions/lang_array"
+      },
+      "agent": {
+        "description": "The agent of the patent",
+        "$ref":"#/definitions/lang_array"
+      },
+      "agency": {
+        "description": "The agency of the patent",
+        "$ref":"#/definitions/lang_array"
+      },
+      "ipc": {
+        "description": "The ipc code of the patent.",
+        "title": "The ipc schema",
+        "type": "string"
+      },
+      "isdt": {
+        "description": "The issue date of the patent.",
+        "title": "The isdt schema",
+        "type": "integer"
+      },
+      "legal": {
+        "description": "The description of the legal status.",
+        "items": {
+          "properties": {
+            "l007ep": {
+              "description": "The legal status date.",
+              "id": "/properties/legal/items/properties/l007ep",
+              "title": "The l007ep schema",
+              "type": "integer"
+            },
+            "legal_desc": {
+              "description": "The legal status description.",
+              "$ref":"#/definitions/lang_array"
+            }
+          },
+          "type": "object"
+        },
+        "type": "array"
+      },
+      "patent_id": {
+        "description": "The unique id of the patent.",
+        "title": "The patent_id schema",
+        "type": "string"
+      },
+      "patent_type": {
+        "description": "The type of the patent, enum: Applications,Patents,Design, Utilites.",
+        "title": "The patent_type schema",
+        "type": "string"
+      },
+      "pbdt": {
+        "description": "The public date of the patent.",
+        "title": "The pbdt schema",
+        "type": "integer"
+      },
+      "pn": {
+        "description": "The public number of the patent.",
+        "title": "The pn schema",
+        "type": "string"
+      },
+      "title": {
+        "description": "The title of the patent.",
+        "$ref": "#/definitions/lang_array"
+      },
+      "thumbnail": {
+        "description": "The thumbnail download address.",
+        "title": "The thumbnail schema",
+        "type": "string"
+      }
+    },
+    "type": "object"
+  }
+}

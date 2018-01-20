@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {},
+  "id": "http://api.patsnap.com/cloud_patent/trademark_id-schema.json",
+  "properties": {
+    "limit": {
+      "default": 10,
+      "description": "The limit of pagination.",
+      "title": "The limit schema",
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "offset": {
+      "default": 0,
+      "description": "The offset of pagination.",
+      "title": "The offset schema",
+      "type": "integer",
+      "minimum": 0
+    },
+    "trademark_id": {
+      "items": {
+        "description": "A trademark unique id.",
+        "title": "The trademark id schema",
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "total": {
+      "description": "The total count of current requst.",
+      "title": "The total schema",
+      "type": "integer"
+    }
+  },
+  "type": "object"
+}

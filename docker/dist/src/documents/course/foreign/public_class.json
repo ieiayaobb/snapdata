@@ -1,0 +1,75 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {
+    "video_array":{
+      "items": {
+        "properties": {
+          "category": {
+            "description": "分类名",
+            "title": "分类名",
+            "type": "string"
+          },
+          "created": {
+            "description": "发布时间",
+            "title": "发布时间",
+            "type": "string"
+          },
+          "lecturer": {
+            "description": "讲师名",
+            "title": "讲师名",
+            "type": "string"
+          },
+          "thumb": {
+            "description": "缩略图地址",
+            "title": "缩略图地址",
+            "type": "string"
+          },
+          "title": {
+            "description": "课程标题",
+            "title": "课程标题",
+            "type": "string"
+          },
+          "url": {
+            "description": "课程链接",
+            "title": "课程链接",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    }
+  },
+  "id": "http://api.zhihuiya.com/cloud_course/course_videos-schema.json",
+  "properties": {
+    "data": {
+      "properties": {
+        "code": {
+          "description": "返回结果状态码",
+          "title": "状态码",
+          "type": "integer"
+        },
+        "msg": {
+          "description": "返回结果信息",
+          "title": "返回结果信息",
+          "type": "string"
+        },
+        "sid": {
+          "description": "客户端状态保持",
+          "title": "sid",
+          "type": "string"
+        },
+        "status": {
+          "description": "返回成功与否状态",
+          "title": "返回状态",
+          "type": "integer"
+        },
+        "content": {
+          "$ref":"#/definitions/video_array",
+          "description": "课程列表"
+        }
+      },
+      "type": "object"
+    }
+  },
+  "type": "object"
+}

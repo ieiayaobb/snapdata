@@ -1,0 +1,122 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {
+    "lang_array": {
+      "items": {
+        "properties": {
+          "lang": {
+            "description": "The language of the text.",
+            "title": "The lang schema",
+            "type": "string"
+          },
+          "text": {
+            "description": "The text of current language.",
+            "title": "The text schema",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "type": "array"
+    }
+  },
+  "id": "http://api.patsnap.com/cloud_patent/company-schema.json",
+  "properties": {
+    "business_scope": {
+      "description": "The business scope of the company.",
+      "title": "The business_scope schema",
+      "type": "string"
+    },
+    "company_id": {
+      "description": "The unique id of the company.",
+      "title": "The company_id schema",
+      "type": "string"
+    },
+    "company_name": {
+      "description": "The name of the company.",
+      "title": "The company_name schema",
+      "type": "string"
+    },
+    "company_type": {
+      "description": "The type of the company.",
+      "title": "The company_type schema",
+      "type": "string"
+    },
+    "credit_code": {
+      "description": "The credit code of the company.",
+      "title": "The credit_code schema",
+      "type": "string"
+    },
+    "date_approved": {
+      "description": "The license approved date.",
+      "title": "The date_approved schema",
+      "type": "integer"
+    },
+    "date_establish": {
+      "description": "The establish date pf the company.",
+      "title": "The date_establish schema",
+      "type": "integer"
+    },
+    "date_from": {
+      "description": "The business start date.",
+      "title": "The date_from schema",
+      "type": "integer"
+    },
+    "date_to": {
+      "description": "The business end date.",
+      "title": "The date_to schema",
+      "type": "integer"
+    },
+    "industry": {
+      "properties": {
+        "code": {
+          "description": "The company industry code.",
+          "title": "The code schema",
+          "type": "string"
+        },
+        "desc": {
+          "description": "The company description.",
+          "title": "The desc schema",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "legal_person": {
+      "description": "The legal person of the company.",
+      "title": "The legal_person schema",
+      "type": "string"
+    },
+    "org_number": {
+      "description": "The organization of the company.",
+      "title": "The org_number schema",
+      "type": "string"
+    },
+    "reg_address": {
+      "$ref":"#/definitions/lang_array",
+      "description": "The registered address of the company."
+    },
+    "reg_capital": {
+      "default": 0.00,
+      "description": "The registered captial of the company.",
+      "title": "The reg_capital schema",
+      "type": "number"
+    },
+    "reg_capital_type": {
+      "description": "The registered captial type.",
+      "title": "The reg_capital_type schema",
+      "type": "string"
+    },
+    "reg_institute": {
+      "description": "The registered institute of the company.",
+      "title": "The reg_institute schema",
+      "type": "string"
+    },
+    "reg_status": {
+      "description": "The registration status of the company.",
+      "title": "The reg_status schema",
+      "type": "string"
+    }
+  },
+  "type": "object"
+}

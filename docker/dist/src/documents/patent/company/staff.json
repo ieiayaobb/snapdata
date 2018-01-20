@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {},
+  "id": "http://api.patsnap.com/cloud_patent/company_staff-schema.json",
+  "properties": {
+    "company_id": {
+      "default": "000000000",
+      "description": "The unique id of the company.",
+      "title": "The company_id schema",
+      "type": "string"
+    },
+    "staff": {
+      "items": {
+        "properties": {
+          "name": {
+            "description": "The staff name of the company.",
+            "title": "The name schema",
+            "type": "string"
+          },
+          "type": {
+            "description": "The staff type of the company.",
+            "title": "The type schema",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "type": "array"
+    }
+  },
+  "type": "object"
+}

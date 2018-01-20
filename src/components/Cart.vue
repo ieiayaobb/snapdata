@@ -1,5 +1,5 @@
 <template>
-  <div class="cart" v-bind:style="{width: cart_width}">
+  <div class="cart">
     <div class="collapse-btn" @click="expand"></div>
     <div :class="['menu',{'menu_active':menu_isactive},]"></div>
   </div>
@@ -11,7 +11,6 @@ export default {
   name: 'cart',
   data () {
     return {
-      cart_width: 80,
       menu_isactive: false
     }
   },
@@ -27,7 +26,7 @@ export default {
 <style scoped>
 .cart {
   position: fixed;
-  min-width: 10px;
+  min-width: 80px;
   height: 100%;
   background-color: #eeeeee;
   right: 0;
@@ -39,15 +38,16 @@ export default {
   left: 0;
   width: 10px;
   height: 100%;
-  background-color: #000;
+  background-color: #aaaaaa;
 }
-  .menu{
-    width: 0;
-    height: 100%;
-    background-color: gold;
-    transition: 1s width;
-  }
-  .menu_active{
-    width: 70px;
-  }
+
+.menu{
+  width: 0;
+  height: 100%;
+  transition: 1s width;
+}
+
+.menu_active{
+  width: 400px;
+}
 </style>

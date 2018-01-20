@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {},
+  "id": "http://api.patsnap.com/cloud_patent/company_change-schema.json",
+  "properties": {
+    "change": {
+      "items": {
+        "properties": {
+          "change_after": {
+            "description": "The situation after change.",
+            "title": "The change_after schema",
+            "type": "string"
+          },
+          "change_before": {
+            "description": "The situation before change.",
+            "title": "The change_before schema",
+            "type": "string"
+          },
+          "change_item": {
+            "description": "The change item.",
+            "title": "The change_item schema",
+            "type": "string"
+          },
+          "change_time": {
+            "description": "The change time.",
+            "title": "The change_time schema",
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "company_id": {
+      "description": "The unique id of the company.",
+      "title": "The company_id schema",
+      "type": "string"
+    }
+  },
+  "type": "object"
+}
