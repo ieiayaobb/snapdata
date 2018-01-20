@@ -1,17 +1,18 @@
 <template>
   <div class="data-set">
     <div class="head">
-      Patent
+      {{title}}
     </div>
     <div class="body">
-      <div class="charts">
+      <div class="chart">
         <chart :options="pie"></chart>
       </div>
       <div class="desc">
-        Snapdata is not just about high quality IP Data, but we have much more associated and NPL Data
+        {{desc}}
       </div>
     </div>
     <div class="foot">
+      <el-button type="text">Filters</el-button>
     </div>
   </div>
 </template>
@@ -38,6 +39,14 @@ export default {
   components: {
     chart: ECharts
   },
+  props: {
+    title: String,
+    desc: String,
+    chart_data: {
+      type: Array,
+      required: true
+    }
+  },
   data: function () {
     return {
       pie: {
@@ -60,13 +69,7 @@ export default {
                 }
               }
             },
-            data: [
-              {value: 335, name: '直接访问'},
-              {value: 310, name: '邮件营销'},
-              {value: 234, name: '联盟广告'},
-              {value: 135, name: '视频广告'},
-              {value: 1548, name: '搜索引擎'}
-            ]
+            data: this.chart_data
           }
         ],
         animationDuration: 2000
@@ -84,6 +87,31 @@ export default {
   width: 200px;
   float: left;
   margin: 20px;
+}
+
+.head {
+  padding: 10px;
+  border: 1px solid #eeeeee;
+  font-size: 16px;
+  text-align: center
+}
+
+.body {
+  border: 1px solid #eeeeee;
+}
+
+.foot {
+  text-align: center;
+  border: 1px solid #eeeeee;
+}
+
+.chart {
+  background-color: #eeeeee;
+}
+
+.desc {
+  font-size: 14px;
+  padding: 10px;
 }
 
 .echarts {
