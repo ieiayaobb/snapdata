@@ -1,0 +1,8 @@
+developer-frontend-service:
+  image: developer-frontend:Dev.1.1.0-SNAPSHOT
+  ports:
+   - "80:80"
+  volumes:
+  - ./logs:/opt/logs
+  env_file: env
+  restart: always
