@@ -5,7 +5,7 @@
     </div>
     <div class="body">
       <div class="chart">
-        <chart :options="pie"></chart>
+        <chart :options="chart_data"></chart>
       </div>
       <div class="desc">
         {{desc}}
@@ -42,36 +42,21 @@ export default {
   props: {
     title: String,
     desc: String,
-    chart_data: {
+    serise_data: {
       type: Array,
       required: true
     }
   },
   data: function () {
     return {
-      pie: {
-        series: [
-          {
-            name: '访问来源',
-            type: 'pie',
-            radius: ['50%', '70%'],
-            avoidLabelOverlap: false,
-            label: {
-              normal: {
-                show: false,
-                position: 'center'
-              },
-              emphasis: {
-                show: true,
-                textStyle: {
-                  fontSize: '30',
-                  fontWeight: 'bold'
-                }
-              }
-            },
-            data: this.chart_data
-          }
-        ],
+      chart_data: {
+        xAxis: {
+          type: 'category'
+        },
+        yAxis: {
+          type: 'value'
+        },
+        series: this.serise_data,
         animationDuration: 2000
       }
     }

@@ -1,11 +1,11 @@
 <template>
   <div>
     <div class="play">
-      <DataSet title="Patent" :desc="desc" :chart_data="collection_data1"></DataSet>
-      <DataSet title="Trademark" :desc="desc" :chart_data="collection_data2"></DataSet>
-      <DataSet title="Litigation" :desc="desc" :chart_data="collection_data3"></DataSet>
-      <DataSet title="Licencing" :desc="desc" :chart_data="collection_data4"></DataSet>
-      <DataSet title="NPL" :desc="desc" :chart_data="collection_data5"></DataSet>
+      <DataSet title="Patent" :desc="desc" :serise_data="serise_data1"></DataSet>
+      <DataSet title="Trademark" :desc="desc" :serise_data="serise_data2"></DataSet>
+      <DataSet title="Litigation" :desc="desc" :serise_data="serise_data3"></DataSet>
+      <DataSet title="Licencing" :desc="desc" :serise_data="serise_data4"></DataSet>
+      <DataSet title="NPL" :desc="desc" :serise_data="serise_data5"></DataSet>
     </div>
     <cart>
 
@@ -25,32 +25,117 @@ export default {
   data: function () {
     return {
       desc: 'Snapdata is not just about high quality IP Data, but we have much more associated and NPL Data',
-      collection_data1: [
-        {value: 335, name: 'CN'},
-        {value: 310, name: 'US'},
-        {value: 234, name: 'EU'},
-        {value: 135, name: 'JP'}
+      serise_data1: [
+        {
+          name: 'Region',
+          type: 'pie',
+          radius: ['50%', '70%'],
+          avoidLabelOverlap: false,
+          label: {
+            normal: {
+              show: false,
+              position: 'center'
+            },
+            emphasis: {
+              show: true,
+              textStyle: {
+                fontSize: '30',
+                fontWeight: 'bold'
+              }
+            }
+          },
+          data: [
+            {value: 335, name: 'CN'},
+            {value: 310, name: 'US'},
+            {value: 234, name: 'EU'},
+            {value: 135, name: 'JP'}
+          ]
+        }
       ],
-      collection_data2: [
-        {value: 132, name: 'CN'},
-        {value: 33, name: 'US'},
-        {value: 135, name: 'JP'}
+      serise_data2: [
+        {
+          data: [120, 200, 150, 80, 70, 110, 130],
+          type: 'bar'
+        }
       ],
-      collection_data3: [
-        {value: 34, name: 'CN'},
-        {value: 23, name: 'US'},
-        {value: 14, name: 'EU'},
-        {value: 67, name: 'JP'}
+      serise_data3: [
+        {
+          name: 'Region',
+          type: 'pie',
+          radius: ['50%', '70%'],
+          avoidLabelOverlap: false,
+          label: {
+            normal: {
+              show: false,
+              position: 'center'
+            },
+            emphasis: {
+              show: true,
+              textStyle: {
+                fontSize: '30',
+                fontWeight: 'bold'
+              }
+            }
+          },
+          data: [
+            {value: 34, name: 'CN'},
+            {value: 23, name: 'US'},
+            {value: 14, name: 'EU'},
+            {value: 67, name: 'JP'}
+          ]
+        }
       ],
-      collection_data4: [
-        {value: 125, name: 'CN'},
-        {value: 54, name: 'JP'}
+      serise_data4: [
+        {
+          name: 'Region',
+          type: 'pie',
+          radius: ['50%', '70%'],
+          avoidLabelOverlap: false,
+          label: {
+            normal: {
+              show: false,
+              position: 'center'
+            },
+            emphasis: {
+              show: true,
+              textStyle: {
+                fontSize: '30',
+                fontWeight: 'bold'
+              }
+            }
+          },
+          data: [
+            {value: 125, name: 'CN'},
+            {value: 54, name: 'JP'}
+          ]
+        }
       ],
-      collection_data5: [
-        {value: 33, name: 'CN'},
-        {value: 12, name: 'US'},
-        {value: 42, name: 'EU'},
-        {value: 136, name: 'JP'}
+      serise_data5: [
+        {
+          name: 'Region',
+          type: 'pie',
+          radius: ['50%', '70%'],
+          avoidLabelOverlap: false,
+          label: {
+            normal: {
+              show: false,
+              position: 'center'
+            },
+            emphasis: {
+              show: true,
+              textStyle: {
+                fontSize: '30',
+                fontWeight: 'bold'
+              }
+            }
+          },
+          data: [
+            {value: 33, name: 'CN'},
+            {value: 12, name: 'US'},
+            {value: 42, name: 'EU'},
+            {value: 136, name: 'JP'}
+          ]
+        }
       ]
     }
   },
