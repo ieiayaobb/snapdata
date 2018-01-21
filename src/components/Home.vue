@@ -7,20 +7,16 @@
       <DataSet title="Licencing" :desc="desc" :serise_data="serise_data4"></DataSet>
       <DataSet title="NPL" :desc="desc" :serise_data="serise_data5"></DataSet>
     </div>
-    <cart>
-
-    </cart>
   </div>
 </template>
 
 <script>
 import DataSet from './DataSet'
-import Cart from './Cart'
 
 export default {
   name: 'home',
   components: {
-    DataSet, Cart
+    DataSet
   },
   data: function () {
     return {
@@ -146,5 +142,4 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
 </style>

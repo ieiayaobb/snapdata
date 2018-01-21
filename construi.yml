@@ -1,0 +1,23 @@
+image: local-dtr.zhihuiya.com/buildenv/node:8.7
+
+default: build
+
+working_dir: $PWD
+# entrypoint: /bin/bash
+stdin_open: True
+tty: True
+mem_limit: 1000000000
+privileged: True
+
+environment:
+  - BUILD_REVERSION=$GIT_COMMIT
+  - BUILD_NUMBER=$BUILD_NUMBER
+
+volumes:
+  - /var/run/docker.sock:/var/run/docker.sock
+
+targets:
+  build:
+    run: ./build.sh build
+
+

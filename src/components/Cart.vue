@@ -26,10 +26,11 @@ export default {
 <style scoped>
 .cart {
   position: fixed;
-  min-width: 80px;
-  height: 100%;
-  background-color: #eeeeee;
+  top:60px;
+  bottom: 0;
   right: 0;
+  min-width: 80px;
+  background-color: #eeeeee;
 }
 
 .collapse-btn {
