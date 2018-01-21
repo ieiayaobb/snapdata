@@ -4,6 +4,8 @@ import Index from '@/components/Index'
 import Login from '@/components/Login'
 import Register from '@/components/Register'
 import Home from '@/components/Home'
+import StepStrata from '@/components/StepStrata'
+import StepDeliveryOptions from '@/components/StepDeliveryOptions'
 
 import store from '../store/store'
 
@@ -21,6 +23,20 @@ const routes = [
       {
         path: 'home',
         component: Home,
+        meta: {
+          requireAuth: false
+        }
+      },
+      {
+        path: 'step2',
+        component: StepStrata,
+        meta: {
+          requireAuth: false
+        }
+      },
+      {
+        path: 'step3',
+        component: StepDeliveryOptions,
         meta: {
           requireAuth: false
         }
