@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <el-menu :default-active="activeIndex" theme="dark" class="" mode="horizontal" :router="true">
-      <el-menu-item index="/">SnapData</el-menu-item>
+    <el-menu :default-active="activeIndex" class="" mode="horizontal" :router="true">
+      <el-menu-item index="/">
+        <img class="logo" :src="logo">
+      </el-menu-item>
       <div class="login-menu-item">
         <el-button v-show="!isLogined" type="primary" router="login" @click="jumpLogin">Login</el-button>
         <div v-show="isLogined" class="logout-wrapper">
@@ -17,6 +19,7 @@
 <script>
 import { mapGetters } from 'vuex'
 import * as types from './store/types'
+import logo from './assets/img/logo.png'
 
 export default {
   name: 'app',
@@ -28,8 +31,7 @@ export default {
   },
   data () {
     return {
-      switchWidth: 85,
-      switchValue: false,
+      logo: logo,
       activeIndex: '/'
     }
   },
@@ -66,8 +68,12 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+  color: #0c5297;
   height: 100%;
+}
+
+.logo {
+  height: 40px;
 }
 
 a {
