@@ -12,7 +12,18 @@
       </div>
     </div>
     <div class="foot">
-      <el-button type="text">Filters</el-button>
+      <el-popover
+        ref="filter-popover"
+        placement="right"
+        width="200"
+        trigger="click">
+        <div>
+          <el-checkbox-group v-model="countryGroup">
+            <el-checkbox-button v-for="country in countries" :label="country" :key="country">{{country}}</el-checkbox-button>
+          </el-checkbox-group>
+        </div>
+      </el-popover>
+      <el-button type="text" v-popover:filter-popover>Filters<i class="el-icon-setting el-icon--right"></i></el-button>
     </div>
   </div>
 </template>
@@ -49,6 +60,8 @@ export default {
   },
   data: function () {
     return {
+      countryGroup: ['CN', 'JP'],
+      countries: ['CN', 'US', 'EU', 'JP']
     }
   },
   methods: {
