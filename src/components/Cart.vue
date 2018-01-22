@@ -36,7 +36,7 @@ export default {
 <style lang="scss" scoped>
   .cart {
     position: fixed;
-    top:60px;
+    top:0;
     bottom: 0;
     right: 0;
     min-width: 80px;
@@ -70,7 +70,7 @@ export default {
   .menu{
     width: 0;
     height: 100%;
-    transition: 1s width;
+    transition: 0.5s width;
   }
 
   .menu_active{
