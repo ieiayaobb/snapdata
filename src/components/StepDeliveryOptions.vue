@@ -26,7 +26,7 @@ export default {
   },
   data: function () {
     return {
-      delivery_frequency:'1'
+      delivery_frequency: '1'
     }
   },
   methods: {

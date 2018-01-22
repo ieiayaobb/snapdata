@@ -42,23 +42,14 @@ export default {
   props: {
     title: String,
     desc: String,
-    serise_data: {
-      type: Array,
+    chart_data: {
+      type: Object,
       required: true
     }
   },
   data: function () {
     return {
-      chart_data: {
-        xAxis: {
-          type: 'category'
-        },
-        yAxis: {
-          type: 'value'
-        },
-        series: this.serise_data,
-        animationDuration: 2000
-      }
+      chart_data: this.chart_data
     }
   },
   methods: {

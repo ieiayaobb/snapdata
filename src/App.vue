@@ -15,14 +15,14 @@
       </el-menu>
     </div>
     <div class="main-container">
-      <div class="step-container">
+      <!-- <div class="step-container">
         <el-steps :active="2">
-          <el-step title="步骤 1" description="这是一段很长很长很长的描述性文字"></el-step>
-          <el-step title="步骤 2" description="这是一段很长很长很长的描述性文字"></el-step>
-          <el-step title="步骤 3" description="这段就没那么长了"></el-step>
-          <el-step title="步骤4" description="这是一段很长很长很长的描述性文字"></el-step>
+          <el-step title="Step 1" description="Step desc"></el-step>
+          <el-step title="Step 2" description="Step desc"></el-step>
+          <el-step title="Step 3" description="Step desc"></el-step>
+          <el-step title="Step 4" description="Step desc"></el-step>
         </el-steps>
-      </div>
+      </div> -->
       <div class="content-container">
         <router-view></router-view>
       </div>
