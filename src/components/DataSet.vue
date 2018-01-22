@@ -49,7 +49,6 @@ export default {
   },
   data: function () {
     return {
-      chart_data: this.chart_data
     }
   },
   methods: {

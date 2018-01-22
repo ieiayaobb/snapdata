@@ -5,13 +5,13 @@
         <el-menu-item index="/">
           <img class="logo" :src="logo">
         </el-menu-item>
-        <div class="login-menu-item">
+        <!-- <div class="login-menu-item">
           <el-button v-show="!isLogined" type="primary" router="login" @click="jumpLogin">Login</el-button>
           <div v-show="isLogined" class="logout-wrapper">
             <span class="username">{{ user.username }}</span><span class="greet">Hello</span>
             <a href="#" @click="logout" class="logout">Logout</a>
           </div>
-        </div>
+        </div> -->
       </el-menu>
     </div>
     <div class="main-container">
@@ -23,11 +23,10 @@
           <el-step title="Step 4" description="Step desc"></el-step>
         </el-steps>
       </div> -->
-      <div class="content-container">
-        <router-view></router-view>
-      </div>
+      <router-view></router-view>
     </div>
     <cart></cart>
+    <v-footer></v-footer>
   </div>
 </template>
 
@@ -36,11 +35,12 @@ import { mapGetters } from 'vuex'
 import Cart from './components/Cart'
 import * as types from './store/types'
 import logo from './assets/img/logo.png'
+import vFooter from './components/Footer'
 
 export default {
   name: 'app',
   components: {
-    Cart
+    Cart, vFooter
   },
   computed: {
     ...mapGetters({
@@ -121,6 +121,7 @@ a {
   color: #FFFFFF;
 }
 .main-container{
+  float: left;
   padding-right: 60px;
 }
 .main-container .step-container{

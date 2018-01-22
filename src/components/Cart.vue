@@ -40,6 +40,7 @@ export default {
   width: 10px;
   height: 100%;
   background-color: #aaaaaa;
+  cursor: pointer;
 }
 
 .menu{
@@ -49,6 +50,6 @@ export default {
 }
 
 .menu_active{
-  width: 400px;
+  width: 600px;
 }
 </style>

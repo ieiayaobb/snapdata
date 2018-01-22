@@ -1,0 +1,9 @@
+@mixin img-word-inline($fontSize) {
+    img,
+    span {
+        display: inline-block;
+        margin-right: 10px;
+        vertical-align: middle;
+        font-size: $fontSize;
+    }
+}

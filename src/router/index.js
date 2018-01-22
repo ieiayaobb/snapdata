@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Index from '@/components/Index'
 import Login from '@/components/Login'
 import Register from '@/components/Register'
 import Home from '@/components/Home'
@@ -14,19 +13,12 @@ Vue.use(Router)
 const routes = [
   {
     path: '/',
-    name: 'Index',
-    component: Index,
+    name: 'Home',
+    component: Home,
     meta: {
       requireAuth: false
     },
     children: [
-      {
-        path: 'home',
-        component: Home,
-        meta: {
-          requireAuth: false
-        }
-      },
       {
         path: 'step2',
         component: StepStrata,
